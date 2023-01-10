@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Red Hat Display';
+}
+
+body {
+    background-color: #E0E8FF;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+.card-img {
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    background-color: #fff;
+    width: 400px;
+    height: 420px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.info h1 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.info p {
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.order-info {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 25% 55% 20%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.order h4 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1rem;
+}
+
+.order p {
+    color: hsl(224, 23%, 55%);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.change a {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    text-decoration: none;
+    transition: 0.15s;
+}
+
+.change a:hover {
+    color: #766CF1;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.payment a,
+.cancel a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.payment a {
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 0.5rem;
+    color: #fff;
+    box-shadow: 0 8px 25px hsl(245, 75%, 82%);
+    transition: 0.15s;
+}
+
+.payment a:hover {
+    background-color: #766CF1;
+}
+
+.cancel a {
+    color: hsl(224, 23%, 55%);
+    transition: 0.15s;
+}
+
+.cancel a:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 410px) {
+
+    .card-img,
+    .card-info {
+        width: 300px;
+    }
+
+    .order-icon img {
+        width: 100%;
+    }
+
+    .order-info {
+        grid-template-columns: 20% 40% 30%;
+    }
+
+    .order h4,
+    .order p {
+        font-size: 0.8rem;
+    }
+
+    .change a {
+        font-size: 0.8rem;
+    }
+}
